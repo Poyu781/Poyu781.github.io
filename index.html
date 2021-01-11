@@ -146,6 +146,70 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/%E7%84%A1%E6%A8%99%E9%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Poyu Chiu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PoyuPythonLearning">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/11/%E7%84%A1%E6%A8%99%E9%A1%8C/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2021-01-11 15:53:14" itemprop="dateCreated datePublished" datetime="2021-01-11T15:53:14+08:00">2021-01-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>format 用法<br><a target="_blank" rel="noopener" href="https://blog.jaycetyle.com/2018/01/python-format-string/">link </a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Bob&quot;</span></span><br><span class="line">greeting = <span class="string">&quot;Hello, Bob&quot;</span></span><br><span class="line"></span><br><span class="line">print(greeting)</span><br><span class="line"></span><br><span class="line">name = <span class="string">&quot;Rolf&quot;</span></span><br><span class="line"></span><br><span class="line">print(greeting)</span><br><span class="line"></span><br><span class="line">greeting = <span class="string">f&quot;Hello, <span class="subst">&#123;name&#125;</span>&quot;</span></span><br><span class="line">print(greeting)</span><br><span class="line"></span><br><span class="line">num = <span class="number">1234567890.0987</span></span><br><span class="line">print(<span class="string">f&#x27;num is <span class="subst">&#123;num:<span class="number">.1</span>f&#125;</span>&#x27;</span> ) <span class="comment"># num is 1234567890.1 只留下小數點後一位</span></span><br><span class="line">print(<span class="string">f&#x27;num is <span class="subst">&#123;num:,f&#125;</span>&#x27;</span> ) <span class="comment">#num is 1,234,567,890.098700 千分位</span></span><br></pre></td></tr></table></figure>
+<p>tuple 用法，超讚</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">x, y = <span class="number">5</span>, <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># x, y = (5, 11)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -- Destructuring in for loops --</span></span><br><span class="line"></span><br><span class="line">student_attendance = &#123;<span class="string">&quot;Rolf&quot;</span>: <span class="number">96</span>, <span class="string">&quot;Bob&quot;</span>: <span class="number">80</span>, <span class="string">&quot;Anne&quot;</span>: <span class="number">100</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> student, attendance <span class="keyword">in</span> student_attendance.items():</span><br><span class="line">    print(<span class="string">f&quot;<span class="subst">&#123;student&#125;</span>: <span class="subst">&#123;attendance&#125;</span>&quot;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># -- Ignoring values with underscore --</span></span><br><span class="line"></span><br><span class="line">person = (<span class="string">&quot;Bob&quot;</span>, <span class="number">42</span>, <span class="string">&quot;Mechanic&quot;</span>)</span><br><span class="line">name, _, profession = person</span><br></pre></td></tr></table></figure>
+<p>dict.items() 可以將 key 跟 value 包成 tuple 的形式使用，可以用兩個變數去丟，程式碼會變得更好讀</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -- Collecting values --</span></span><br><span class="line"></span><br><span class="line">head, *tail = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">print(head)  <span class="comment"># 1</span></span><br><span class="line">print(tail)  <span class="comment"># [2, 3, 4, 5]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*head, tail = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line">print(head)  <span class="comment"># [1, 2, 3, 4]</span></span><br><span class="line">print(tail)  <span class="comment"># 5</span></span><br></pre></td></tr></table></figure>
+<p>去頭去尾的用法，還在學習「*」字號的用法</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/11/firstarticle/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -333,7 +397,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
